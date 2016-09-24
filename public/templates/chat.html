@@ -1,0 +1,23 @@
+<div class="chat-container" style="height: 100%; flex-direction: column; display: flex">
+  <div flex class="chat-list" style="overflow-y: auto">
+    <div ng-repeat="message in conversation">
+        <section class="user-list" layout horizontal >
+        <div class="avatar navy" style="{{cssAvatar(message.from)}}">
+          <div class="status busy"></div>
+        </div>
+        <div flex>
+          <div class="username">{{dataCenter.users[message.from].displayName}}</div>
+          <div class="text">{{message.text}}</div>
+        </div>
+        <time class="timestamp" is="relative-time">{{showHoursMinutes(message.time)}}</time>
+      </section>
+    </div>
+  </div>
+  <div class="send-message" layout horizontal>
+	  <!-- <paper-input flex label="Type message..." id="input" value="{{mess}}"></paper-input> -->
+    <md-input-container md-no-float class="md-block" style="flex: 1; margin: 0">
+      <input ng-model="mess" placeholder="Type your message" id="my-message">
+    </md-input-container>
+	  <paper-fab icon="send" id="sendButton" ng-click="send()"></paper-fab>
+  </div>
+</div>
