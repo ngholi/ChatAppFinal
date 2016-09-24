@@ -9,6 +9,7 @@ Các bước chạy ứng dụng trên localhost:
   - Import file mychatapp.sql vào mysql server
   - Trỏ command line đến thư mục chứa repo vừa clone, sau đó download các module cần thiết bằng lệnh:
       + npm install
+      + bower install
   - Chạy ứng dụng bằng lệnh:
       + npm start
   - Vào trình duyệt và truy cập http://localhost:3000/
